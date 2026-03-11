@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Uber Application</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <div class="home">
+            <div class="greetings">
+                <h1>Welcome, Driver!</h1>
+                <p>"Accept ride requests, manage your trips, and earn money by driving safely."</p>
+                <button class="get_a_ride" onclick="window.location.href='book.html'">View Ride Requests</button> 
+            </div>
+            <div class="services">
+                <h1>Driver Guidelines</h1>
+                <div class="row">
+                <div class="service">
+            <i class="bi bi-shield-check"></i>
+            <h3>Drive<br/> Safely</h3>
+            <p>Always follow traffic rules, drive responsibly, and ensure the safety of passengers during every ride.</p>
+        </div>
+
+        <div class="service">
+            <i class="bi bi-clock"></i>
+            <h3>Be On<br/> Time</h3>
+            <p>Reach the pickup location quickly and avoid unnecessary delays to provide a better experience for passengers.</p>
+        </div>
+
+        <div class="service">
+            <i class="bi bi-person-check"></i>
+            <h3>Verify Passenger</h3>
+            <p>Confirm the passenger's name and destination before starting the ride to avoid confusion.</p>
+        </div>
+
+        <div class="service">
+            <i class="bi bi-emoji-smile"></i>
+            <h3>Professional Behavior</h3>
+            <p>Maintain polite communication with passengers and provide a friendly travel experience.</p>
+        </div>
+
+        <div class="service">
+            <i class="bi bi-car-front-fill"></i>
+            <h3>Maintain Vehicle</h3>
+            <p>Keep your vehicle clean and well maintained to ensure comfort and safety for passengers.</p>
+        </div>
+
+        <div class="service">
+            <i class="bi bi-x-circle"></i>
+            <h3>Avoid Ride Cancellation</h3>
+            <p>Do not cancel rides unnecessarily after accepting them unless there is an emergency.</p>
+        </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+        <script>
+            fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {document.getElementById("navbar").innerHTML = data;});
+            fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {document.getElementById("footer").innerHTML = data;});
+        </script>
+    </body>
+</html>
